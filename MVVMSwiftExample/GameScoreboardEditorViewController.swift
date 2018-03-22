@@ -26,6 +26,12 @@ class GameScoreboardEditorViewController: UIViewController {
     
     @IBOutlet weak var scoreLabel: UILabel!
     
+    
+    var viewModel: GameScoreboardEditorViewModel {
+        didSet {
+            fillUI()
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -50,6 +56,10 @@ class GameScoreboardEditorViewController: UIViewController {
     }
     
     fileprivate func fillUI() {
+        if !isViewLoaded {
+            return
+        }
+        
 
     }
 
